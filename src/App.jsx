@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp";
 import NotFound from "./pages/NotFound";
 import Lesson from "./pages/Lesson";
 import EditFormation from "./pages/EditFormation";
+import UniGpt from "./pages/UniGpt";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/:formationName/:lessonName" element={<Lesson />} />
         <Route path="/:id" element={<Formation />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/UniGpt" element={<UniGpt/>}/> 
       </Routes>
     </BrowserRouter> 
   );

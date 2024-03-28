@@ -22,7 +22,7 @@ const AskRequest = async ({ prompt, Text }) => {
             return new Error(e.code || "Erreur d'auth non reconue");
         }
         if (e instanceof BadRequestError) {
-            return new Error("Ahchem Akhy on est woke ici fais du politiquement correct")
+            return new Error("Cette question me semble inappropriée, je ne peux y repondre.")
         }
         return new Error(JSON.stringify(e))
     }

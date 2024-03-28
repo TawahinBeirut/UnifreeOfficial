@@ -8,8 +8,8 @@ export default function ChatWindow({ChatsList,loading}){
   }, [ChatsList]); 
 
     return (
-        <div className="flex justify-center pl-7 h-10/12 overflow-y-scroll-custom">
-        <div className="w-full flex flex-col gap-7 p-3">
+        <div className="flex justify-center overflow-y-scroll no-scrollbar">
+        <div className="w-full flex items-center flex-col gap-7 p-3">
             {ChatsList.map(el => (
                 <Chat key={el.Text} {...el} />
             ))}

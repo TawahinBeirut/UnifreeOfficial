@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-import { useState} from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
@@ -28,7 +28,7 @@ const Header = () => {
   const profileButton = (
     <Link to={"/u/" + JSON.stringify(userId)} className="overflow-hidden">
       <img src="/default_pp.png" className="md:hidden" width={40}></img>
-      <p className="hidden md:flex items-center px-6 py-2 border-2 border-main-purple font-semibold text-main-purple rounded hover:bg-main-purple hover:text-white duration-300">
+      <p className="hidden md:flex items-center px-8 py-2 border-2 border-main-purple font-semibold text-main-purple rounded hover:bg-main-purple hover:text-white duration-300">
         My Profile
       </p>
     </Link>
@@ -61,7 +61,12 @@ const Header = () => {
           />
         </button>
       </form>
-      {rightButton}
+      <div className="flex flex-row items-center font-bold space-x-4">
+        <a href="/unigpt" className="md:flex items-center px-6 py-2 border-2 border-main-purple font-semibold text-main-purple rounded hover:bg-main-purple hover:text-white duration-300">
+        <img src="/boticon.png" alt="Logo" className="w-4 mr-2" />UniGPT
+        </a>
+        {rightButton}
+      </div>
     </header>
   );
 };
